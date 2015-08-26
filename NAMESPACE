@@ -1,0 +1,4 @@
+export(calculate.CN)
+export(call.amplicons)
+export(call.genes)
+importFrom("stats", "mad", "median", "pnorm", "qnorm", "sd", "shapiro.test")

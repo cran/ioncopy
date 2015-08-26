@@ -1,0 +1,12 @@
+39db99eaa9203c02e860e708cf45ff04 *DESCRIPTION
+7ed2a19c179d85b1e3569ae2313adc68 *NAMESPACE
+e2938447b51a33074a826ecffc65f843 *R/calculate.CN.R
+e83cabb16347b9f27cc3b3b3b4c574d8 *R/call.amplicons.R
+6d87d0f8eb355911263d36a0de295d51 *R/call.genes.R
+e85a46cf3dc7c8e4e154672f8180dcf8 *R/ioncopy-internal.R
+5947b49425799fd14aebec8f9856acd1 *data/coverage.rda
+ca9dc104a5ca87acf333b084e1e62a09 *man/calculate.CN.Rd
+8ead5652869b516650db092fae2ab353 *man/call.amplicons.Rd
+ca7c3971ec0c6afb2ab48c04fd28b4d2 *man/call.genes.Rd
+f83fa862de9ff076a6da39d332f902a9 *man/coverage.Rd
+379786b742e83756184ef5a26dab27c1 *man/ioncopy-package.Rd
