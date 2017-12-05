@@ -5,38 +5,21 @@ Calculation of copy numbers
 }
 \description{
 Starting from a matrix of coverages, the corresponding matrix of copy numbers is calculated.
-A null model for significance assessment of copy number alterations is fitted. Each amplicon
-in each sample is assessed for significance. P-values are reported in three ways:
-without multiple testing correction, correted for the number of samples and corrected for
-both, the number of samples and the number of amplicons.
+The caluculation includes a sample normalization step and a amplicon normalization step.
 }
 \usage{
-calculate.CN(coverage, method.pooled = "amplicon", method.mt = "Bonferroni",
-thres.cov = 100, thres.p = 0.05)
+calculate.CN(coverage, scale.amplicon=NULL)
 }
 \arguments{
   \item{coverage}{
-A numeric matrix containing the coverages of each amlicon (rows) in each of samples (columns).
+A numeric matrix containing the coverages of each amplicon (rows) in each sample (columns).
 }
-  \item{method.pooled}{
-Method used for the estimation of the null model. Either one common null model for all amplicons
-("pooled") or individual null models for each of the amplicons ("amplicon") are fitted.
-("amplicon")
-}
-  \item{method.mt}{
-Method for multiple testing correction: must be equal to "Bonferroni", "Holm", "Hochberg",
-"SidakSS", "SidakSD", "BH", "BY", "ABH" or "TSBH" as described in the package multtest.
-}
-  \item{thres.cov}{
-Theshold for the minimal mean coverage of an amplicon to be included in the analysis.
-}
-  \item{thres.p}{
-Significance level for calling copy number alterations.
+  \item{scale.amplicon}{
+Method for amplicon normalization. If \code{NULL} the scaling factors are estimated from \code{coverage}.
 }
 }
 \value{
-Matrix of copy numbers with the estimated null model ("model") and the p-values
-for each amplicon in each sample ("P") as attributes.
+Matrix of copy numbers with the amplicon scaling factors (\code{"scale.amplicon"}) as attribute.
 }
 \examples{
 \dontrun{

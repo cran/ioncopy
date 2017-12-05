@@ -1,4 +1,14 @@
-export(calculate.CN)
-export(call.amplicons)
-export(call.genes)
+importFrom("grDevices", "rgb")
+ importFrom("graphics", "legend")
+ importFrom("stats", "as.dendrogram", "dist", "hclust", "heatmap",
+             "order.dendrogram", "pchisq", "reorder")
+ importFrom("utils", "read.table")
 importFrom("stats", "mad", "median", "pnorm", "qnorm", "sd", "shapiro.test")
+export(read.coverages)
+export(calculate.CN)
+export(assess.CNA)
+export(call.CNA)
+export(heatmap.CNA)
+export(summarize.CNA)
+export(runIoncopy)
+

@@ -12,8 +12,8 @@ Method for the calculation of copy numbers and calling of copy number alteration
 \tabular{ll}{
 Package: \tab ioncopy\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2015-08-25\cr
+Version: \tab 1.2\cr
+Date: \tab 2015-09-11\cr
 License: \tab GPL-3 \cr
 }
 }
