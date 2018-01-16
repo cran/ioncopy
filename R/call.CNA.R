@@ -130,7 +130,8 @@ call.CNA <- function(CNA, analysis.mode="gene-wise", method.p="samples_genes/amp
             index.p <- which(p < 0.05)
             index <- intersect(index.cn, index.p)
             result <- paste(length(index), length(cn), sep = " of ")
-            A[l,"ncalls"] <- result
+            if(length(index) >= sig.call) A[l,"ncalls"] <- result
+            else A[l, name.call] <- "NORMAL"
             }
     }
 
@@ -162,25 +163,6 @@ call.CNA <- function(CNA, analysis.mode="gene-wise", method.p="samples_genes/amp
 
      for (i in 1:nsamples){
 
-     if(analysis.mode == "gene-wise"){
-
-     index <- ((i-1)*nwise+1):(i*nwise)
-     index.g <- which(A[index, name.call]=="GAIN")
-     for(g in index.g){
-      if (as.numeric(strsplit(A[index[g], "ncalls"]," of ")[[1]][1]) >= sig.call)
-      GAIN[g, i] <- 1
-     }
-
-     index.l <- which(A[index, name.call]=="LOSS")
-     for(l in index.l){
-       if (as.numeric(strsplit(A[index[l], "ncalls"]," of ")[[1]][1]) >= sig.call)
-         LOSS[l, i] <- 1
-     }
-
-     }
-
-
-     if(analysis.mode == "amplicon-wise"){
      index <- ((i-1)*nwise+1):(i*nwise)
 
      index.g <- which(A[index, name.call]=="GAIN")
@@ -188,8 +170,6 @@ call.CNA <- function(CNA, analysis.mode="gene-wise", method.p="samples_genes/amp
      GAIN[index.g, i] <- 1
      LOSS[index.l, i] <- 1
      }
-
-   }
 
 
   calls <- list()

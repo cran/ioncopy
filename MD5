@@ -1,8 +1,8 @@
-1ebcf7b2fd15192ee5079fe308a3976e *DESCRIPTION
+027b8bcb81636c839e0701923bdc72b7 *DESCRIPTION
 e388ee09483effaff335edca5ce5e92f *NAMESPACE
 31d942b8df56e65e2899ae0ca1eb67dd *R/assess.CNA.R
 9bc9a126580c3a9a2ec33cb03783e9b8 *R/calculate.CN.R
-c175e3e7d41d5fa5bb122c6df9344051 *R/call.CNA.R
+2ea0a8b0c293178300abdee7fbc04016 *R/call.CNA.R
 aec960fee85557414cf9bb0000d1f23c *R/heatmap.CNA.R
 e85a46cf3dc7c8e4e154672f8180dcf8 *R/ioncopy-internal.R
 953a87dbc998eb222d435265de4a6ec2 *R/read.coverages.R
