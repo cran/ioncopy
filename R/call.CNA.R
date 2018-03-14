@@ -1,5 +1,3 @@
-#library(multtest)
-
 
 convert <- function(CN, P, type="amplicon") {
   namplicons <- nrow(CN)
@@ -17,7 +15,7 @@ convert <- function(CN, P, type="amplicon") {
 
 
 
-call.CNA <- function(CNA, analysis.mode="gene-wise", method.p="samples_genes/amplicons", method.mt="Bonferroni", thres.p=0.05, sig.call=0) {
+call.CNA <- function(CNA, analysis.mode="gene-wise", method.p="samples_genes/amplicons", method.mt="bonferroni", thres.p=0.05, sig.call=0, sig.per=0) {
 
     nsamples <- ncol(CNA[["CN.a"]])
     samples <- colnames(CNA[["CN.a"]])
@@ -60,8 +58,7 @@ call.CNA <- function(CNA, analysis.mode="gene-wise", method.p="samples_genes/amp
       for (x in wiselist) {
         index <- which(A[, wise] == x)
         p <- as.numeric(A[index, "p"])
-        M <- multtest::mt.rawp2adjp(p, proc=method.mt)
-        A[index, name.p] <- M$adjp[order(M$index), method.mt]
+        A[index, name.p] <- p.adjust(p, method=method.mt)
       }
       }
     }
@@ -76,8 +73,7 @@ call.CNA <- function(CNA, analysis.mode="gene-wise", method.p="samples_genes/amp
       for (y in samples) {
         index <- which(A[, "sample"] == y)
         p <- as.numeric(A[index, "p"])
-        M <- multtest::mt.rawp2adjp(p, proc=method.mt)
-        A[index, name.p] <- M$adjp[order(M$index), method.mt]
+        A[index, name.p] <- p.adjust(p, method=method.mt)
       }
       }
     }
@@ -90,8 +86,7 @@ call.CNA <- function(CNA, analysis.mode="gene-wise", method.p="samples_genes/amp
       }
       else{
           p <- as.numeric(A[, "p"])
-          M <- multtest::mt.rawp2adjp(p, proc=method.mt)
-          A[, name.p] <- M$adjp[order(M$index), method.mt]
+          A[, name.p] <- p.adjust(p, method=method.mt)
       }
 
     }
@@ -130,7 +125,9 @@ call.CNA <- function(CNA, analysis.mode="gene-wise", method.p="samples_genes/amp
             index.p <- which(p < 0.05)
             index <- intersect(index.cn, index.p)
             result <- paste(length(index), length(cn), sep = " of ")
-            if(length(index) >= sig.call) A[l,"ncalls"] <- result
+            if((length(index) >= sig.call)&&((length(index)/length(a))*100>=sig.per)){
+                A[l,"ncalls"] <- result
+            }
             else A[l, name.call] <- "NORMAL"
             }
     }

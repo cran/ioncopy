@@ -10,7 +10,7 @@ Different methods of multiple testing can be chosen to control either FWER or FD
 }
 \usage{
 call.CNA(CNA, analysis.mode="gene-wise", method.p="samples_genes/amplicons",
-method.mt="Bonferroni", thres.p=0.05, sig.call=0)
+method.mt="bonferroni", thres.p=0.05, sig.call=0, sig.per=0)
 }
 \arguments{
   \item{CNA}{
@@ -26,15 +26,19 @@ p-values corrected for amplicons/genes (\code{"p_genes/amplicons"}) or p-values 
 amplicons/genes (\code{"p_samples_genes/amplicons"}).
 }
   \item{method.mt}{
-Method for multiple testing correction: must be equal to \code{Bonferroni}, \code{Holm},
-\code{Hochberg}, \code{SidakSS}, \code{SidakSD}, \code{BH}, \code{BY}, \code{ABH} or \code{TSBH}
-as described in the package \code{multtest}.
+Method for multiple testing correction: must be equal to \code{bonferroni}, \code{holm},
+\code{hochberg}, \code{fdr}, \code{BH}, \code{BY}, \code{hommel} or \code{none}
+as described in the package \code{stats}.
 }
   \item{thres.p}{
 Significance level for calling of copy number alterations.
 }
   \item{sig.call}{
 An integer >= 0. Only used if \code{analysis.mode="gene-wise"}. Required minimum number of amplicons supporting a gene CNA call.
+}
+
+  \item{sig.per}{
+An integer >= 0. Only used if \code{analysis.mode="gene-wise"}. Required minimum percentage of amplicons supporting a gene CNA call.
 }
 
 }
@@ -52,6 +56,6 @@ calls <- call.CNA(CNA)
 \dontshow{
 data(coverage)
 CN <- assess.CNA(coverage)
-CNA <- call.CNA(CN, analysis.mode = "amplicon-wise", method.p = "samples", method.mt = "BH", thres.p = 0.05, sig.call= 1)
+CNA <- call.CNA(CN, analysis.mode = "amplicon-wise", method.p = "samples", method.mt = "BH", thres.p = 0.05, sig.call= 1, sig.per=50)
 }
 }

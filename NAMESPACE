@@ -1,8 +1,8 @@
 importFrom("grDevices", "rgb")
  importFrom("graphics", "legend")
  importFrom("stats", "as.dendrogram", "dist", "hclust", "heatmap",
-             "order.dendrogram", "pchisq", "reorder")
- importFrom("utils", "read.table")
+             "order.dendrogram", "pchisq", "reorder", "p.adjust")
+importFrom("utils", "read.table")
 importFrom("stats", "mad", "median", "pnorm", "qnorm", "sd", "shapiro.test")
 export(read.coverages)
 export(calculate.CN)

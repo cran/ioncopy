@@ -1,14 +1,14 @@
 Package: ioncopy
 Type: Package
 Title: Calling Copy Number Alterations in Amplicon Sequencing Data
-Version: 2.0.1
+Version: 2.1.0
 Date: 2018-01-15
 Author: Jan Budczies, Eva Romanovsky
 Maintainer: Jan Budczies <jan.budczies@charite.de>
-Imports: stats, multtest, shiny
+Imports: shiny
 Description: Method for the calculation of copy numbers and calling of copy number alterations. The algorithm uses coverage data from amplicon sequencing of a sample cohort as input. The method includes significance assessment, correction for multiple testing and does not depend on normal DNA controls. Budczies (2016 Mar 15) <doi:10.18632/oncotarget.7451>.
 License: GPL-3
-Packaged: 2018-01-16 12:09:04 UTC; evka
+Packaged: 2018-03-14 12:04:49 UTC; evka
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2018-01-16 15:38:59 UTC
+Date/Publication: 2018-03-14 14:03:45 UTC

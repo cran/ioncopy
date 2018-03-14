@@ -23,6 +23,7 @@ shinyUI(fluidPage(
       radioButtons(inputId="multtest", label = "Method:",choices = c("Bonferroni (FWER)","Benjamini-Hochberg (FDR)", "none"),selected = "Bonferroni (FWER)"),
       textInput("thres.p", label="Significance level:", value="0.05"),
       textInput("sig.call", label="Minimum Number of Significant Amplicons:", value="0"),
+      textInput("sig.per", label="Minimum Percentage of Significant Amplicons:", value="0"),
       hr(),
       h4(strong("Heatmap Parameters")),
       textInput("thres.percent", "Minimum percentage:", value="0"),

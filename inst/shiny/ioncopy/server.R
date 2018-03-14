@@ -20,6 +20,7 @@ shinyServer(function(input, output) {
   analysis.mode.cna <- reactive(input$ana.mode)
   method.mt.cna <- reactive(input$multtest)
   sig.amp <- reactive(as.numeric(input$sig.call))
+  sig.per <- reactive(as.numeric(input$sig.per))
 
   thres.percent <-  reactive(as.numeric(input$thres.percent))
   cluster.genes <- reactive("genes/amplicons" %in% input$cluster)
@@ -107,10 +108,10 @@ shinyServer(function(input, output) {
 
     incProgress(1/5, message="Calling amplifications/genes...")
 
-    if (method.mt.cna() == "Bonferroni (FWER)") method.mt <- "Bonferroni"
+    if (method.mt.cna() == "Bonferroni (FWER)") method.mt <- "bonferroni"
     if (method.mt.cna() == "Benjamini-Hochberg (FDR)") method.mt <- "BH"
     if (method.mt.cna() == "none") {method.mt <- "none"}
-    cna <- call.CNA(cn, analysis.mode=analysis.mode.cna(), method.p=method.p.cna(), method.mt=method.mt, thres.p=thres.p.cna(), sig.call=sig.amp())
+    cna <- call.CNA(cn, analysis.mode=analysis.mode.cna(), method.p=method.p.cna(), method.mt=method.mt, thres.p=thres.p.cna(), sig.call=sig.amp(), sig.per=sig.per())
 
 
     sumcna <- summarize.CNA(cna)
