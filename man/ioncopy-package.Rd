@@ -12,14 +12,18 @@ Method for the calculation of copy numbers and calling of copy number alteration
 \tabular{ll}{
 Package: \tab ioncopy\cr
 Type: \tab Package\cr
-Version: \tab 1.2\cr
-Date: \tab 2015-09-11\cr
+Version: \tab 2.1.1\cr
+Date: \tab 2018-03-21\cr
 License: \tab GPL-3 \cr
 }
 }
+
 \author{
-Jan Budczies <jan.budczies@charite.de>
+Maintainer: Jan Budczies <jan.budczies@charite.de>\cr
+Eva Romanovsky <eva.romanovsky@rambler.ru>
 }
 \references{
-Jan Budczies, Nicole Pfarr, Albrecht Stenzinger, Denise Treue, Volker Endris, Fakher Ismaeel, Nikola Bangemann, Jens-Uwe Blohmer, Manfred Dietel, Sibylle Loibl, Wilko Weichert, Carsten Denkert: \emph{Ioncopy: A novel method for calling copy number alterations in amplicon sequencing data including significance assessment.} Submitted.
+Jan Budczies, Nicole Pfarr, Albrecht Stenzinger, Denise Treue, Volker Endris, Fakher Ismaeel, Nikola Bangemann, Jens-Uwe Blohmer, Manfred Dietel, Sibylle Loibl, Wilko Weichert, Carsten Denkert: \emph{Ioncopy: a novel method for calling copy number alterations in amplicon sequencing data including significance assessment.} Oncotarget 7(11):13236-47, 2016, doi: 10.18632/oncotarget.7451.
+
+Jan Budczies, Nicole Pfarr, Eva Romanovsky, Volker Endris, Albrecht Stenzinger, and Carsten Denkert: \emph{Ioncopy: an R Shiny app to call copy number alterations in targeted NGS data.} Submitted.
 }

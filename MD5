@@ -1,4 +1,4 @@
-80094fb5c79f0561d4d5b107aa6d16f0 *DESCRIPTION
+c2a68e63d3b15a1469761f9a8339d4ee *DESCRIPTION
 d9f3e0d174c419869e1ad9e0a097a522 *NAMESPACE
 31d942b8df56e65e2899ae0ca1eb67dd *R/assess.CNA.R
 9bc9a126580c3a9a2ec33cb03783e9b8 *R/calculate.CN.R
@@ -9,7 +9,7 @@ e85a46cf3dc7c8e4e154672f8180dcf8 *R/ioncopy-internal.R
 22b4ba5f2fdb8e62fb8a3e477ec0775a *R/runIoncopy.R
 bd7afc40b420358bdecb7b99031e3900 *R/summarize.CNA.R
 5947b49425799fd14aebec8f9856acd1 *data/coverage.rda
-da039ce244aee3de8a6a792797415f86 *inst/doc/Ioncopy_manual.pdf
+432483cf0a15e0f83eb5faa7353147b0 *inst/doc/Ioncopy_manual.pdf
 5280f9189927c60e4b015a1cc61bbfb0 *inst/doc/Thumbs.db
 2690f8b133ae47344ed33523820d0963 *inst/doc/index.html
 903e81721147496b19bb6ae58ca4102c *inst/extdata/coverages_breastcancer.xls
@@ -20,7 +20,7 @@ f71eb36eae14d657716bcd393f8c6dd0 *man/calculate.CN.Rd
 a5fbe513ab23e2030b32179ed7444436 *man/call.CNA.Rd
 f8308146095b3d0df00196dd042ff2ed *man/coverage.Rd
 fd54dbc0012aa4cc34ffd7de1d0481e4 *man/heatmap.CNA.Rd
-60cd393775438f17bf50140cfd4e2324 *man/ioncopy-package.Rd
+50fc913b7961e547dbbc49ed37ff012d *man/ioncopy-package.Rd
 bcdc93f5ef0b1cc7b9ee5faaec6ecdc0 *man/read.coverages.Rd
 2fe5ee9179db3b9218b75b26a2a43236 *man/runIoncopy.Rd
 b20eac26a36c5777459bf4607d224d9d *man/summarize.CNA.Rd
