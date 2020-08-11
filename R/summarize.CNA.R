@@ -92,8 +92,8 @@ summarize.CNA <- function(calls){
       cna.samples[i,"n_losses"] <- numberl
       numberg <- length(which(Gain[, i]=="1"))
       cna.samples[i,"n_gains"] <- numberg
-      cna.samples[i, "percent_gains"] <- paste(round((numberg/ngains*100),1), sep = "")
-      cna.samples[i, "percent_losses"] <- paste(round((numberl/nlosses*100),1), sep = "")
+      cna.samples[i, "percent_gains"] <- paste(round((numberg/nwise*100),1), sep = "")
+      cna.samples[i, "percent_losses"] <- paste(round((numberl/nwise*100),1), sep = "")
     }
 
     cna.samples <- cbind(cna.samples, "")
@@ -175,8 +175,8 @@ summarize.CNA <- function(calls){
     cna.wise[i,"n_losses"] <- numberl
     numberg <- length(which(Gain[i,]=="1"))
     cna.wise[i,"n_gains"] <- numberg
-    cna.wise[i, "percent_gains"] <- paste(round((numberg/ngains*100),1), sep = "")
-    cna.wise[i, "percent_losses"] <- paste(round((numberl/nlosses*100),1), sep = "")
+    cna.wise[i, "percent_gains"] <- paste(round((numberg/nsamples*100),1), sep = "")
+    cna.wise[i, "percent_losses"] <- paste(round((numberl/nsamples*100),1), sep = "")
   }
 
   cna.wise <- cbind(cna.wise, "")

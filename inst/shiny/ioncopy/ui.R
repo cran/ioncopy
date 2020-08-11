@@ -48,7 +48,8 @@ shinyUI(fluidPage(
         downloadButton("GAIN", "Gains: matrix"),
         downloadButton("LOSS", "Losses: matrix"),
         downloadButton("sumCNA.samples", "CNAs samples: list"),
-        downloadButton("sumCNA.wise", "CNAs genes/amplicons: list")
+        downloadButton("sumCNA.wise", "CNAs genes/amplicons: list"),
+        downloadButton("zip", "All files: zip")
       ),
       p(
       textOutput("error"),

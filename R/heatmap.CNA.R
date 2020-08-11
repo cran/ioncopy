@@ -67,7 +67,18 @@ heatmap.CNA <- function(CNA, thres.percent=1, cluster.genes=TRUE, cluster.sample
     nwise <- nrow(Loss)
     nsamples <- ncol(Loss)
 
+    GL <- matrix(nrow=nwise, ncol=nsamples)
+    rownames(GL) <- rownames(Loss)
+    colnames(GL) <- colnames(Loss)
+
+    GL <- Gain - Loss
+
+    m <- apply(abs(GL), 1, sum)
+    index <- which(m/ncol(GL)*100 >= thres.percent)
+
+
       CN <- CNA[["CN"]]
+      CN <- CN[index,]
 
       if (cluster.genes) {
         Rowv <- as.dendrogram(hclust(dist(CN, method=method.dist), method=method.link))

@@ -12,14 +12,14 @@ Method for the calculation of copy numbers and calling of copy number alteration
 \tabular{ll}{
 Package: \tab ioncopy\cr
 Type: \tab Package\cr
-Version: \tab 2.1.1\cr
-Date: \tab 2018-03-21\cr
+Version: \tab 2.2.2\cr
+Date: \tab 2020-08-07\cr
 License: \tab GPL-3 \cr
 }
 }
 
 \author{
-Maintainer: Jan Budczies <jan.budczies@charite.de>\cr
+Maintainer: Jan Budczies <jan.budczies@med.uni-heidelberg.de>\cr
 Eva Romanovsky <eva.romanovsky@rambler.ru>
 }
 \references{
